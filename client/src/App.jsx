@@ -8,14 +8,16 @@ import { PeerProvider } from './providers/Peer';
 export default function App(){
   return (
     <BrowserRouter>
-    <PeerProvider>
     <SocketProvider>
+    <PeerProvider>
+    
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/room/:roomId' element={<Room />} />
       </Routes>
-      </SocketProvider>
       </PeerProvider>
+      </SocketProvider>
+     
     </BrowserRouter>
   );
 }
